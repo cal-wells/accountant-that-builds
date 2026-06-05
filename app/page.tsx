@@ -1,25 +1,84 @@
+import Link from "next/link";
 import { siteConfig } from "@/lib/site";
+import { Reveal } from "@/components/motion/reveal";
 
-// Placeholder home page — U1 verifies the design system renders.
-// U3 replaces this with the real hero + about content.
+/*
+ * Home — hero + about.
+ * TODO(owner): personalise the intro and about copy below. The structure and
+ * tone are set; swap in your own words and real interests.
+ */
 export default function Home() {
   return (
-    <main className="mx-auto flex max-w-3xl flex-1 flex-col justify-center px-6 py-24">
-      <p className="font-heading text-sm font-medium uppercase tracking-widest text-primary">
-        {siteConfig.role}
-      </p>
-      <h1 className="mt-4 text-5xl font-bold text-ink sm:text-6xl">
-        {siteConfig.name}
-      </h1>
-      <p className="mt-4 text-2xl font-medium text-muted">
-        {siteConfig.tagline}
-      </p>
-      <div className="mt-10 rounded-card bg-surface p-6 shadow-soft">
-        <p className="text-muted">
-          Design system check — fintech palette, Space Grotesk headings, Inter
-          body. The real site lands in the next units.
-        </p>
-      </div>
-    </main>
+    <div className="mx-auto w-full max-w-3xl px-6">
+      {/* Hero */}
+      <section className="flex min-h-[70vh] flex-col justify-center py-16">
+        <Reveal>
+          <p className="font-heading text-sm font-semibold uppercase tracking-widest text-primary">
+            {siteConfig.role} · Qualified Accountant
+          </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <h1 className="mt-4 text-5xl font-bold leading-[1.05] text-ink sm:text-7xl">
+            {siteConfig.name}
+          </h1>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p className="mt-5 max-w-xl text-2xl font-medium text-muted">
+            {siteConfig.tagline}.
+          </p>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            I&apos;m a finance professional who builds. I use AI and code to cut
+            the busywork out of reporting, forecasting, and analysis — turning
+            spreadsheets that take days into tools that run in seconds.
+          </p>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link
+              href="/cv"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition-colors hover:bg-primary-dark"
+            >
+              View my CV
+            </Link>
+            <Link
+              href="/projects"
+              className="rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-ink/20"
+            >
+              See my projects
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* About */}
+      <section className="border-t border-border py-16">
+        <Reveal>
+          <h2 className="text-3xl font-bold text-ink">A bit about me</h2>
+        </Reveal>
+        <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
+          <Reveal delay={0.05}>
+            <p>
+              I&apos;ve spent my career in FP&amp;A — owning budgets, building
+              forecasts, and helping the business make sharper decisions with
+              numbers. Somewhere along the way I got curious about what I could
+              automate, and that curiosity turned into a genuine skill: writing
+              Python, building dashboards, and putting AI to work on real
+              finance problems.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p>
+              {/* TODO(owner): make this paragraph yours. */}
+              Outside of work you&apos;ll find me following developments in AI
+              and Bitcoin, building a personal knowledge system, and chasing
+              whatever the next training goal happens to be. I like learning in
+              public and tinkering until something clicks.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+    </div>
   );
 }
