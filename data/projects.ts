@@ -27,7 +27,7 @@ export const projects: Project[] = [
     what: "The site you're looking at now — designed and built from scratch with Next.js, TypeScript, and Claude Code, then deployed to Vercel.",
     why: "The proof is the product. Rather than claiming I can build with modern tools, I built the thing you're reading on — start to finish.",
     status: "Live",
-    // TODO(owner): after deploy, set demoUrl to the live URL (or detailUrl to the GitHub repo).
+    demoUrl: "https://accountant-that-builds.vercel.app/",
   },
   {
     slug: "running-performance-tracker",
