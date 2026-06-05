@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/*
+  The Accountant That Codes — design system
+  Fintech-adjacent: clean, modern, approachable (Revolut/Stripe/Monzo in spirit).
+  All visual tokens are centralized here so the look can be tuned in one place.
+*/
+
+@theme {
+  /* Palette */
+  --color-background: #fafaf7; /* warm off-white page background */
+  --color-surface: #ffffff; /* cards, raised elements */
+  --color-ink: #0a0a0a; /* primary text */
+  --color-muted: #5b6168; /* secondary text */
+  --color-border: #ececE7; /* hairlines, dividers */
+  --color-primary: #0e9f6e; /* confident teal-green accent */
+  --color-primary-dark: #0b8159; /* hover/active for primary */
+  --color-secondary: #4f46e5; /* deep indigo for gradients/highlights */
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), var(--font-inter), sans-serif;
+
+  /* Radius & elevation */
+  --radius-card: 1rem;
+  --shadow-soft: 0 1px 2px rgb(10 10 10 / 0.04), 0 8px 24px rgb(10 10 10 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(10 10 10 / 0.05), 0 16px 40px rgb(10 10 10 / 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Respect users who prefer reduced motion at the platform level too. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
