@@ -2,8 +2,6 @@
  * Project showcase data. Add new projects by appending to this array — the
  * Projects page maps over it, so no layout changes are needed (R10).
  * To surface a live demo later, set `demoUrl` (or `detailUrl`) on a project (R9).
- *
- * TODO(owner): refine the descriptions to match how each project actually turns out.
  */
 
 export type ProjectStatus = "In Progress" | "Planned" | "Live";
@@ -24,24 +22,32 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "training-performance-tracker",
-    name: "AI Training & Performance Tracker",
-    what: "A personal tool that logs training sessions and uses AI to spot trends, flag plateaus, and suggest what to focus on next.",
-    why: "The same pattern I apply to financial performance — measure, analyse, act — pointed at my own training data. Proof that the analytical toolkit travels.",
-    status: "In Progress",
+    slug: "portfolio-site",
+    name: "This Portfolio Site",
+    what: "The site you're looking at now — designed and built from scratch with Next.js, TypeScript, and Claude Code, then deployed to Vercel.",
+    why: "The proof is the product. Rather than claiming I can build with modern tools, I built the thing you're reading on — start to finish.",
+    status: "Live",
+    // TODO(owner): after deploy, set demoUrl to the live URL (or detailUrl to the GitHub repo).
+  },
+  {
+    slug: "running-performance-tracker",
+    name: "AI Running & Performance Tracker",
+    what: "An AI assistant that pulls my running data via Strava's new MCP and uses Claude to spot trends, flag plateaus, and suggest what to train next.",
+    why: "The same measure-analyse-act loop I apply to financial performance, pointed at my own running — proof the analytical toolkit travels beyond the finance function.",
+    status: "Planned",
   },
   {
     slug: "knowledge-repository",
     name: "AI-Powered Knowledge Repository",
-    what: "An Obsidian vault wired up with Claude to capture, summarise, and connect what I'm reading across AI, Bitcoin, and finance.",
-    why: "Staying genuinely current in fast-moving fields is hard. This turns scattered reading into a searchable, compounding knowledge base.",
-    status: "In Progress",
+    what: "A personal knowledge vault in Obsidian wired to Claude — capturing and connecting what I read across AI, Bitcoin, and finance, inspired by Andrej Karpathy's second-brain approach.",
+    why: "Staying genuinely current in fast-moving fields is hard. This turns scattered articles and videos into a structured, searchable base that compounds over time.",
+    status: "Planned",
   },
   {
     slug: "bookkeeping-automation",
     name: "Small-Business Bookkeeping Assistant",
-    what: "AI tooling to streamline invoicing and payroll for a family-run small business, cutting the manual data entry a bookkeeper does each month.",
-    why: "A real-world test of AI on everyday finance admin — measurable time saved, fewer errors, and a clear before-and-after a finance leader recognises.",
+    what: "AI tooling to streamline invoicing and payroll for a family-run small business, cutting the manual admin a bookkeeper handles each month.",
+    why: "A real-world test of AI on everyday finance admin — starting with family as a proof of concept, with an eye on growing it into a side venture.",
     status: "Planned",
   },
 ];
