@@ -1,8 +1,6 @@
 /**
  * Shared site constants. Single source of truth for identity, contact links,
  * and navigation. Edit values here rather than hardcoding them in components.
- *
- * TODO(owner): confirm the placeholder values marked below.
  */
 
 export type NavItem = {
@@ -18,12 +16,14 @@ export const navItems: NavItem[] = [
 ];
 
 export const siteConfig = {
-  name: "Callum Wells", // TODO(owner): confirm full name as it should appear
-  role: "FP&A Manager",
+  name: "Callum Wells",
+  role: "Group FP&A Manager",
+  credential: "ICAS Chartered Accountant (CA)",
   tagline: "The accountant that codes",
+  location: "London, UK",
   description:
-    "FP&A Manager and qualified accountant using AI and code to make finance faster, sharper, and more efficient.",
+    "Group FP&A Manager and ICAS Chartered Accountant using AI and code to modernise finance — faster reporting, sharper forecasting, and real efficiency.",
   email: "callumwells23@gmail.com",
-  linkedinUrl: "https://www.linkedin.com/in/your-handle", // TODO(owner): set real LinkedIn URL
+  linkedinUrl: "https://www.linkedin.com/in/wellscallum/",
   navItems,
 } as const;

@@ -14,7 +14,7 @@ export default function Home() {
       <section className="flex min-h-[70vh] flex-col justify-center py-16">
         <Reveal>
           <p className="font-heading text-sm font-semibold uppercase tracking-widest text-primary">
-            {siteConfig.role} · Qualified Accountant
+            {siteConfig.role} · ICAS Chartered Accountant
           </p>
         </Reveal>
         <Reveal delay={0.05}>
@@ -60,21 +60,26 @@ export default function Home() {
         <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
           <Reveal delay={0.05}>
             <p>
-              I&apos;ve spent my career in FP&amp;A — owning budgets, building
-              forecasts, and helping the business make sharper decisions with
-              numbers. Somewhere along the way I got curious about what I could
-              automate, and that curiosity turned into a genuine skill: writing
-              Python, building dashboards, and putting AI to work on real
-              finance problems.
+              I&apos;m an ICAS Chartered Accountant and First-Class Economics
+              graduate who started out in Big 4 assurance at EY before moving
+              into high-growth FP&amp;A. Today I lead Group FP&amp;A — owning
+              budgets, building the long-range model, and business-partnering
+              with department heads to turn numbers into commercial decisions.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <p>
-              {/* TODO(owner): make this paragraph yours. */}
-              Outside of work you&apos;ll find me following developments in AI
-              and Bitcoin, building a personal knowledge system, and chasing
-              whatever the next training goal happens to be. I like learning in
-              public and tinkering until something clicks.
+              What sets me apart is how I work: I bring traditional financial
+              rigour together with Python, data analysis, and AI-driven
+              automation — implementing Datarails, scripting away manual
+              reporting, and using tools like Claude to get to answers faster.
+            </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p>
+              Outside of work I&apos;m usually running or travelling — I&apos;ve
+              backpacked across Central and South America, Australia, and New
+              Zealand — and I like following where AI and Bitcoin are heading.
             </p>
           </Reveal>
         </div>
