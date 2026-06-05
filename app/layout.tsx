@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import { Analytics } from "@/components/analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,7 +36,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Nav />
+        <main className="flex flex-1 flex-col">{children}</main>
+        <Footer />
+        <Analytics />
+      </body>
     </html>
   );
 }
