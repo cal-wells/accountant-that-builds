@@ -27,7 +27,6 @@ export const projects: Project[] = [
     what: "The site you're looking at now - designed and built from scratch with Next.js, TypeScript, and Claude Code, then deployed to Vercel.",
     why: "The proof is the product. Rather than claiming I can build with modern tools, I built the thing you're reading on - start to finish.",
     status: "Live",
-    demoUrl: "https://calwells.me",
   },
   {
     slug: "stag-do-itinerary",
@@ -35,7 +34,7 @@ export const projects: Project[] = [
     what: "A website I built as best man to organise a 22-person stag do - schedule, logistics, and key details in one place (password-protected for the group).",
     why: "Long before the finance automation, this was me reaching for code to solve a real organisational problem that people actually relied on.",
     status: "Live",
-    demoUrl: "https://cal-wells.github.io/rob-stag-do/",
+    detailUrl: "https://github.com/cal-wells/rob-stag-do",
   },
   {
     slug: "running-performance-tracker",

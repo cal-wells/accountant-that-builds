@@ -8,7 +8,7 @@ const statusStyles: Record<ProjectStatus, string> = {
 
 export function ProjectCard({ project }: { project: Project }) {
   const link = project.demoUrl ?? project.detailUrl;
-  const linkLabel = project.demoUrl ? "View demo" : "Read more";
+  const linkLabel = project.demoUrl ? "Visit site" : "View code";
 
   return (
     <article className="flex h-full flex-col rounded-card border border-border bg-surface p-6 shadow-soft transition-shadow hover:shadow-lift">

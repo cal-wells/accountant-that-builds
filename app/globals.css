@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
-  The Accountant That Codes — design system
+  The Accountant That Builds - design system
   Fintech-adjacent: clean, modern, approachable (Revolut/Stripe/Monzo in spirit).
   All visual tokens are centralized here so the look can be tuned in one place.
 */
@@ -44,6 +44,13 @@ h3,
 h4 {
   font-family: var(--font-heading);
   letter-spacing: -0.02em;
+}
+
+/* Consistent, branded keyboard-focus indicator across all interactive elements. */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Respect users who prefer reduced motion at the platform level too. */

@@ -12,9 +12,7 @@ export default function CvPage() {
   return (
     <div className="mx-auto w-full max-w-3xl px-6 py-16">
       <Reveal>
-        <h1 className="text-4xl font-bold text-ink sm:text-5xl">
-          Experience
-        </h1>
+        <h1 className="text-4xl font-bold text-ink sm:text-5xl">CV</h1>
       </Reveal>
       <Reveal delay={0.05}>
         <p className="mt-4 max-w-2xl text-lg text-muted">

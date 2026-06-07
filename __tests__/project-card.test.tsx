@@ -12,15 +12,25 @@ const base: Project = {
 };
 
 describe("ProjectCard", () => {
-  it("renders a demo link to the demoUrl when present", () => {
+  it("renders a 'Visit site' link to the demoUrl when present", () => {
     render(
       <ProjectCard project={{ ...base, demoUrl: "https://example.com/demo" }} />,
     );
-    const link = screen.getByRole("link", { name: /view demo/i });
+    const link = screen.getByRole("link", { name: /visit site/i });
     expect(link).toHaveAttribute("href", "https://example.com/demo");
   });
 
-  it("renders no demo link when no URL is present", () => {
+  it("renders a 'View code' link to the detailUrl when present", () => {
+    render(
+      <ProjectCard
+        project={{ ...base, detailUrl: "https://github.com/x/y" }}
+      />,
+    );
+    const link = screen.getByRole("link", { name: /view code/i });
+    expect(link).toHaveAttribute("href", "https://github.com/x/y");
+  });
+
+  it("renders no link when no URL is present", () => {
     render(<ProjectCard project={base} />);
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });
