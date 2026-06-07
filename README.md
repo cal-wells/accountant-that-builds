@@ -1,4 +1,4 @@
-# The Accountant That Codes
+# The Accountant That Builds
 
 Personal portfolio site for an FP&A Manager and qualified accountant — built to *show*, not just claim, comfort with AI and code. Four pages: Home, CV, Projects, Contact.
 
