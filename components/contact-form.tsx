@@ -4,10 +4,21 @@ import { useState, type FormEvent } from "react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+type FieldErrors = {
+  name?: string;
+  email?: string;
+  message?: string;
+  form?: string;
+};
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const inputClass =
-  "w-full rounded-lg border border-border bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-primary";
+const inputBase =
+  "w-full rounded-lg border bg-surface px-4 py-3 text-ink outline-none transition-colors";
+
+function inputClass(hasError: boolean) {
+  return `${inputBase} ${hasError ? "border-danger" : "border-border focus:border-primary"}`;
+}
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -15,23 +26,29 @@ export function ContactForm() {
   const [message, setMessage] = useState("");
   const [honeypot, setHoneypot] = useState("");
   const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState<string | null>(null);
+  const [errors, setErrors] = useState<FieldErrors>({});
+
+  // Clear a field's error as the user corrects it.
+  function clearError(field: keyof FieldErrors) {
+    setErrors((prev) => (prev[field] ? { ...prev, [field]: undefined } : prev));
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setError(null);
 
-    // Client-side validation - blocks the POST on bad input.
-    if (!name.trim() || !message.trim()) {
-      setError("Please fill in your name and a message.");
+    // Per-field validation.
+    const next: FieldErrors = {};
+    if (!name.trim()) next.name = "Please enter your name.";
+    if (!email.trim()) next.email = "Please enter your email.";
+    else if (!EMAIL_RE.test(email)) next.email = "That email doesn't look right.";
+    if (!message.trim()) next.message = "Please enter a message.";
+
+    if (next.name || next.email || next.message) {
+      setErrors(next);
       return;
     }
-    if (!EMAIL_RE.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
 
-    // Honeypot: a real person never fills this hidden field. Drop bot submissions silently.
+    // Honeypot: a real person never fills this hidden field. Drop bots silently.
     if (honeypot) {
       setStatus("success");
       return;
@@ -39,13 +56,14 @@ export function ContactForm() {
 
     const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
     if (!formId) {
-      setError(
-        "The contact form isn't configured yet. Please email me directly in the meantime.",
-      );
+      setErrors({
+        form: "The contact form isn't configured yet. Please email me directly in the meantime.",
+      });
       return;
     }
 
     setStatus("submitting");
+    setErrors({});
     try {
       const body = new FormData();
       body.append("name", name);
@@ -68,9 +86,9 @@ export function ContactForm() {
       setMessage("");
     } catch {
       setStatus("error");
-      setError(
-        "Something went wrong sending your message. Please try again, or email me directly.",
-      );
+      setErrors({
+        form: "Something went wrong sending your message. Please try again, or email me directly.",
+      });
     }
   }
 
@@ -118,9 +136,19 @@ export function ContactForm() {
           type="text"
           autoComplete="name"
           value={name}
-          onChange={(event) => setName(event.target.value)}
-          className={inputClass}
+          onChange={(event) => {
+            setName(event.target.value);
+            clearError("name");
+          }}
+          aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? "name-error" : undefined}
+          className={inputClass(!!errors.name)}
         />
+        {errors.name && (
+          <p id="name-error" role="alert" className="mt-1.5 text-sm text-danger">
+            {errors.name}
+          </p>
+        )}
       </div>
 
       <div>
@@ -133,9 +161,19 @@ export function ContactForm() {
           type="email"
           autoComplete="email"
           value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          className={inputClass}
+          onChange={(event) => {
+            setEmail(event.target.value);
+            clearError("email");
+          }}
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? "email-error" : undefined}
+          className={inputClass(!!errors.email)}
         />
+        {errors.email && (
+          <p id="email-error" role="alert" className="mt-1.5 text-sm text-danger">
+            {errors.email}
+          </p>
+        )}
       </div>
 
       <div>
@@ -150,14 +188,28 @@ export function ContactForm() {
           name="message"
           rows={5}
           value={message}
-          onChange={(event) => setMessage(event.target.value)}
-          className={`${inputClass} resize-y`}
+          onChange={(event) => {
+            setMessage(event.target.value);
+            clearError("message");
+          }}
+          aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "message-error" : undefined}
+          className={`${inputClass(!!errors.message)} resize-y`}
         />
+        {errors.message && (
+          <p
+            id="message-error"
+            role="alert"
+            className="mt-1.5 text-sm text-danger"
+          >
+            {errors.message}
+          </p>
+        )}
       </div>
 
-      {error && (
-        <p role="alert" className="text-sm font-medium text-secondary">
-          {error}
+      {errors.form && (
+        <p role="alert" className="text-sm font-medium text-danger">
+          {errors.form}
         </p>
       )}
 

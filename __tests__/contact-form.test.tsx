@@ -37,6 +37,18 @@ describe("ContactForm", () => {
     );
   });
 
+  it("shows a separate inline error for each empty field", async () => {
+    const user = userEvent.setup();
+    const fetchMock = vi.spyOn(global, "fetch");
+
+    render(<ContactForm />);
+    await user.click(screen.getByRole("button", { name: /send/i }));
+
+    const alerts = await screen.findAllByRole("alert");
+    expect(alerts.length).toBeGreaterThanOrEqual(3);
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
   it("blocks submission and shows an error when a required field is empty (AE2)", async () => {
     const user = userEvent.setup();
     const fetchMock = vi.spyOn(global, "fetch");

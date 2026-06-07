@@ -8,7 +8,7 @@
 
 @theme {
   /* Palette */
-  --color-background: #fafaf7; /* warm off-white page background */
+  --color-background: #fafafa; /* true neutral off-white (no warm "AI paper" tint) */
   --color-surface: #ffffff; /* cards, raised elements */
   --color-ink: #0a0a0a; /* primary text */
   --color-muted: #5b6168; /* secondary text */
@@ -16,6 +16,7 @@
   --color-primary: #0e9f6e; /* confident teal-green accent */
   --color-primary-dark: #0b8159; /* hover/active for primary */
   --color-secondary: #4f46e5; /* deep indigo for gradients/highlights */
+  --color-danger: #dc2626; /* form validation errors */
 
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
