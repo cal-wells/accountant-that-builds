@@ -15,7 +15,12 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-4xl px-6">
       {/* Hero */}
-      <section className="flex min-h-[70vh] flex-col justify-center py-16">
+      <section className="relative isolate flex min-h-[70vh] flex-col justify-center overflow-hidden py-16">
+        {/* Soft ambient colour wash - gives the hero its own zone, no clutter */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute -right-24 -top-12 h-96 w-96 rounded-full bg-primary/15 blur-[110px]" />
+          <div className="absolute -bottom-16 -left-24 h-80 w-80 rounded-full bg-secondary/10 blur-[110px]" />
+        </div>
         <div className="flex flex-col gap-10 sm:flex-row-reverse sm:items-center sm:justify-between">
           {/* Photo */}
           <Reveal className="shrink-0 self-center sm:self-auto">
@@ -32,7 +37,8 @@ export default function Home() {
           {/* Intro */}
           <div className="flex-1">
             <Reveal>
-              <p className="font-heading text-sm font-semibold uppercase tracking-widest text-primary">
+              <p className="flex items-center gap-3 font-heading text-sm font-semibold uppercase tracking-widest text-primary">
+                <span aria-hidden className="h-px w-8 bg-primary" />
                 {siteConfig.role} · ICAS Chartered Accountant
               </p>
             </Reveal>
