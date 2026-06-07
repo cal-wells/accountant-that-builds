@@ -13,8 +13,8 @@
   --color-ink: #0a0a0a; /* primary text */
   --color-muted: #5b6168; /* secondary text */
   --color-border: #ececE7; /* hairlines, dividers */
-  --color-primary: #0e9f6e; /* confident teal-green accent */
-  --color-primary-dark: #0b8159; /* hover/active for primary */
+  --color-primary: #2563eb; /* cobalt blue accent (Chelsea-inspired) */
+  --color-primary-dark: #1d4fd7; /* hover/active for primary */
   --color-secondary: #4f46e5; /* deep indigo for gradients/highlights */
   --color-danger: #dc2626; /* form validation errors */
 
