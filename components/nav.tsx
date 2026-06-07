@@ -38,10 +38,18 @@ export function Nav() {
       >
         <Link
           href="/"
-          className="font-heading text-lg font-bold tracking-tight text-ink"
+          className="group font-heading text-lg font-bold tracking-tight text-ink"
           onClick={() => setOpen(false)}
         >
-          {siteConfig.name}
+          <span className="relative inline-block">
+            {siteConfig.name}
+            <span aria-hidden className="text-primary">.</span>
+            {/* Cobalt underline draws in on hover; instant for reduced-motion users. */}
+            <span
+              aria-hidden
+              className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 ease-out group-hover:scale-x-100 motion-reduce:transition-none"
+            />
+          </span>
         </Link>
 
         {/* Desktop links */}
