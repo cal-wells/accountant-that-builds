@@ -30,6 +30,14 @@ export const projects: Project[] = [
     demoUrl: "https://accountant-that-builds.vercel.app/",
   },
   {
+    slug: "stag-do-itinerary",
+    name: "Stag Do Itinerary Site",
+    what: "A website I built as best man to organise a 22-person stag do - schedule, logistics, and key details in one place (password-protected for the group).",
+    why: "Long before the finance automation, this was me reaching for code to solve a real organisational problem that people actually relied on.",
+    status: "Live",
+    demoUrl: "https://cal-wells.github.io/rob-stag-do/",
+  },
+  {
     slug: "running-performance-tracker",
     name: "AI Running & Performance Tracker",
     what: "An AI assistant that pulls my running data via Strava's new MCP and uses Claude to spot trends, flag plateaus, and suggest what to train next.",
