@@ -42,5 +42,6 @@ next-env.d.ts
 
 # Local planning/config files that do not belong in the website repo
 .claude/
+.impeccable/
 /STRATEGY.md
 /docs/
