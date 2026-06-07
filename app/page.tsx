@@ -7,6 +7,11 @@ import { Reveal } from "@/components/motion/reveal";
  * Home - hero + about.
  */
 export default function Home() {
+  // Accent the final word of the tagline ("builds") as a signature touch.
+  const taglineWords = siteConfig.tagline.split(" ");
+  const taglineLead = taglineWords.slice(0, -1).join(" ");
+  const taglineLast = taglineWords[taglineWords.length - 1];
+
   return (
     <div className="mx-auto w-full max-w-4xl px-6">
       {/* Hero */}
@@ -32,13 +37,15 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={0.05}>
-              <h1 className="mt-4 text-5xl font-bold leading-[1.05] text-ink sm:text-6xl">
+              <h1 className="mt-4 text-balance text-5xl font-bold leading-[1.05] text-ink sm:text-7xl">
                 {siteConfig.name}
               </h1>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-5 text-2xl font-medium text-muted">
-                {siteConfig.tagline}.
+                {taglineLead}{" "}
+                <span className="font-semibold text-primary">{taglineLast}</span>
+                .
               </p>
             </Reveal>
             <Reveal delay={0.15}>
