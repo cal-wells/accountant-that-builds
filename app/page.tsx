@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site";
 import { Reveal } from "@/components/motion/reveal";
 
 /*
- * Home — hero + about.
+ * Home - hero + about.
  * TODO(owner): personalise the intro and about copy below. The structure and
  * tone are set; swap in your own words and real interests.
  */
@@ -30,7 +30,7 @@ export default function Home() {
         <Reveal delay={0.15}>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             I&apos;m a finance professional who builds. I use AI and code to cut
-            the busywork out of reporting, forecasting, and analysis — turning
+            the busywork out of reporting, forecasting, and analysis - turning
             spreadsheets that take days into tools that run in seconds.
           </p>
         </Reveal>
@@ -62,7 +62,7 @@ export default function Home() {
             <p>
               I&apos;m an ICAS Chartered Accountant and First-Class Economics
               graduate who started out in Big 4 assurance at EY before moving
-              into high-growth FP&amp;A. Today I lead Group FP&amp;A — owning
+              into high-growth FP&amp;A. Today I lead Group FP&amp;A - owning
               budgets, building the long-range model, and business-partnering
               with department heads to turn numbers into commercial decisions.
             </p>
@@ -71,15 +71,15 @@ export default function Home() {
             <p>
               What sets me apart is how I work: I bring traditional financial
               rigour together with Python, data analysis, and AI-driven
-              automation — implementing Datarails, scripting away manual
+              automation - implementing Datarails, scripting away manual
               reporting, and using tools like Claude to get to answers faster.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <p>
-              Outside of work I&apos;m usually running or travelling — I&apos;ve
+              Outside of work I&apos;m usually running or travelling - I&apos;ve
               backpacked across Central and South America, Australia, and New
-              Zealand — and I like following where AI and Bitcoin are heading.
+              Zealand - and I like following where AI and Bitcoin are heading.
             </p>
           </Reveal>
         </div>

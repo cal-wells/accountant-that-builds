@@ -21,7 +21,7 @@ export function ContactForm() {
     event.preventDefault();
     setError(null);
 
-    // Client-side validation — blocks the POST on bad input.
+    // Client-side validation - blocks the POST on bad input.
     if (!name.trim() || !message.trim()) {
       setError("Please fill in your name and a message.");
       return;
@@ -81,7 +81,7 @@ export function ContactForm() {
         className="rounded-card border border-primary/30 bg-primary/5 p-6 text-ink"
       >
         <p className="font-heading text-lg font-semibold">
-          Thanks — your message is on its way.
+          Thanks - your message is on its way.
         </p>
         <p className="mt-2 text-muted">
           I&apos;ll be in touch soon. In the meantime, feel free to connect on

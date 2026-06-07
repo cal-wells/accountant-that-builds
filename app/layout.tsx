@@ -20,8 +20,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s — ${siteConfig.name}`,
+    default: `${siteConfig.name} - ${siteConfig.tagline}`,
+    template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
 };

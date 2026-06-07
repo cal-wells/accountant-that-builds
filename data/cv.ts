@@ -26,7 +26,7 @@ export const roles: Role[] = [
     company: "Mattioli Woods (formerly Kingswood Group)",
     period: "Jan 2025 – Present",
     points: [
-      "Spearheaded the end-to-end implementation of Datarails within six months — integrating Xero API data flows and restructuring the Chart of Accounts to ensure data integrity.",
+      "Spearheaded the end-to-end implementation of Datarails within six months - integrating Xero API data flows and restructuring the Chart of Accounts to ensure data integrity.",
       "Cut the month-end reporting cycle by ~3 days, eliminating manual spreadsheet dependencies and freeing ~20% of team capacity for value-add analysis.",
       "Built a Python script to automate client-losses reporting and forensic analysis for legal claims, using AI (Claude) to collate data directly supporting decisions.",
       "Constructed the 5-Year Plan Model on live Datarails feeds for real-time scenario planning and variance analysis.",
@@ -34,7 +34,7 @@ export const roles: Role[] = [
     ],
   },
   {
-    title: "Assistant Manager — Banking & Capital Markets",
+    title: "Assistant Manager - Banking & Capital Markets",
     company: "Ernst & Young (EY)",
     period: "Sept 2020 – Jan 2025",
     points: [
@@ -69,7 +69,7 @@ export const qualifications: Qualification[] = [
     detail: "All first-time passes · 2020 – 2023",
   },
   {
-    name: "BSc (Hons) Economics — First-Class Honours",
+    name: "BSc (Hons) Economics - First-Class Honours",
     detail: "University of Bath · 2015 – 2019",
   },
   {
@@ -83,7 +83,7 @@ export const skillGroups: SkillGroup[] = [
   {
     heading: "Faster reporting",
     blurb:
-      "Implemented Datarails with Xero API integration and automated reporting in Python — cutting the month-end cycle by ~3 days and freeing 20% of team capacity.",
+      "Implemented Datarails with Xero API integration and automated reporting in Python - cutting the month-end cycle by ~3 days and freeing 20% of team capacity.",
   },
   {
     heading: "Sharper forecasting",
@@ -93,11 +93,11 @@ export const skillGroups: SkillGroup[] = [
   {
     heading: "Real cost savings",
     blurb:
-      "Wrote Python to automate forensic and losses analysis that used to be manual — measurable hours saved, fewer errors, and faster answers for the business.",
+      "Wrote Python to automate forensic and losses analysis that used to be manual - measurable hours saved, fewer errors, and faster answers for the business.",
   },
   {
     heading: "The toolkit",
     blurb:
-      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire, and advanced Excel modelling — accelerated with AI assistants like Claude Code and Cursor, all explained in plain business terms.",
+      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire, and advanced Excel modelling - accelerated with AI assistants like Claude Code and Cursor, all explained in plain business terms.",
   },
 ];

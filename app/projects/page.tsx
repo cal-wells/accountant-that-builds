@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       </Reveal>
       <Reveal delay={0.05}>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          Where I put AI and code to work — on finance problems and a few
+          Where I put AI and code to work - on finance problems and a few
           personal ones. Some are live, some are in progress. Demos arrive as
           each one matures.
         </p>

@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 /**
  * Enter transition for route changes. Rendered from app/template.tsx, which
- * Next.js re-mounts on every navigation — so this animation plays per route.
+ * Next.js re-mounts on every navigation - so this animation plays per route.
  * Respects prefers-reduced-motion: renders content statically when set.
  */
 export function PageTransition({ children }: { children: ReactNode }) {

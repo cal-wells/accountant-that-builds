@@ -18,12 +18,12 @@ export default function CvPage() {
       </Reveal>
       <Reveal delay={0.05}>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          {siteConfig.role} and qualified accountant — with a habit of
+          {siteConfig.role} and qualified accountant - with a habit of
           automating the slow parts of finance.
         </p>
       </Reveal>
 
-      {/* Work history — vertical timeline */}
+      {/* Work history - vertical timeline */}
       <section className="mt-14">
         <Reveal>
           <h2 className="text-2xl font-bold text-ink">Work history</h2>
@@ -54,7 +54,7 @@ export default function CvPage() {
         </ol>
       </section>
 
-      {/* Skills — framed in finance-native outcomes */}
+      {/* Skills - framed in finance-native outcomes */}
       <section className="mt-16 border-t border-border pt-12">
         <Reveal>
           <h2 className="text-2xl font-bold text-ink">

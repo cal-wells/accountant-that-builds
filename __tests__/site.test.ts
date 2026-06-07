@@ -12,7 +12,7 @@ describe("siteConfig", () => {
   });
 
   it("carries the core identity fields", () => {
-    expect(siteConfig.tagline).toBe("The accountant that codes");
+    expect(siteConfig.tagline).toBe("The accountant that builds");
     expect(siteConfig.email).toContain("@");
     expect(siteConfig.role).toContain("FP&A Manager");
   });
