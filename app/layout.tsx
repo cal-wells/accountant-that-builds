@@ -19,11 +19,19 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://calwells.me"),
   title: {
     default: `${siteConfig.name} - ${siteConfig.tagline}`,
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  openGraph: {
+    title: `${siteConfig.name} - ${siteConfig.tagline}`,
+    description: siteConfig.description,
+    url: "https://calwells.me",
+    siteName: siteConfig.name,
+    type: "website",
+  },
 };
 
 export default function RootLayout({

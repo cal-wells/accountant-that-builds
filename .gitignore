@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local planning/config files that do not belong in the website repo
+.claude/
+/STRATEGY.md
+/docs/
