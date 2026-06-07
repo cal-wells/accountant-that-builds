@@ -38,6 +38,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Reduce orphans/awkward breaks in prose. */
+p {
+  text-wrap: pretty;
+}
+
 h1,
 h2,
 h3,

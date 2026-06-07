@@ -62,18 +62,18 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted sm:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted sm:flex-row">
         <p>
           © {year} {siteConfig.name}
         </p>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-1">
           {links.map(({ label, href, icon: Icon, external }) => (
             <a
               key={label}
               href={href}
               aria-label={label}
               title={label}
-              className="text-muted transition-colors hover:text-primary"
+              className="inline-flex rounded-lg p-2.5 text-muted transition-colors hover:bg-ink/5 hover:text-primary"
               {...(external
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}

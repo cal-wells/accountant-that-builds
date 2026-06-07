@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="mx-auto w-full max-w-5xl px-6 py-16">
+    <div className="mx-auto w-full max-w-6xl px-6 py-16">
       <Reveal>
         <h1 className="text-4xl font-bold text-ink sm:text-5xl">Projects</h1>
       </Reveal>
