@@ -93,6 +93,6 @@ export const skillGroups: SkillGroup[] = [
   {
     heading: "The toolkit",
     blurb:
-      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire, and advanced Excel modelling - accelerated with AI assistants like Claude Code and Cursor, all explained in plain business terms.",
+      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire, and advanced Excel modelling - accelerated with AI assistants like Claude Code and Cursor. Backed by formal training: Google Generative AI Leader and Python for Finance.",
   },
 ];
