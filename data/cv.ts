@@ -29,8 +29,8 @@ export const roles: Role[] = [
       "Spearheaded the end-to-end implementation of Datarails within six months - integrating Xero API data flows and restructuring the Chart of Accounts to ensure data integrity.",
       "Cut the month-end reporting cycle by ~3 days, eliminating manual spreadsheet dependencies and freeing ~20% of team capacity for value-add analysis.",
       "Built a Python script to automate client-losses reporting and forensic analysis for legal claims, using AI (Claude) to collate data directly supporting decisions.",
-      "Constructed the 5-Year Plan Model on live Datarails feeds for real-time scenario planning and variance analysis.",
-      "Lead monthly business partnering with five department heads, and own the Monthly Revenue Flash and ExCo Finance Pack presented to the Board.",
+      "Constructed the 5-Year Plan Model using live Datarails feeds for real-time scenario planning and variance analysis.",
+      "Lead monthly business partnering with five department heads and own the Monthly Revenue Flash and finance contributions to ExCo and Board.",
     ],
   },
   {
@@ -71,11 +71,6 @@ export const qualifications: Qualification[] = [
   {
     name: "BSc (Hons) Economics - First-Class Honours",
     detail: "University of Bath · 2015 – 2019",
-  },
-  {
-    name: "Certifications",
-    detail:
-      "Python for Finance (Udemy) · Google Generative AI Leader · Bloomberg Market Concepts",
   },
 ];
 

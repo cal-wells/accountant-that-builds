@@ -61,9 +61,9 @@ export default function Home() {
               <Reveal delay={0.15}>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
                   I&apos;m a finance professional who builds. I use AI and code
-                  to cut the busywork out of reporting, forecasting, and
-                  analysis - turning spreadsheets that take days into tools that
-                  run in seconds.
+                  to efficiently produce reporting, forecasting and analysis -
+                  turning spreadsheets that take days into tools that run in
+                  seconds.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
@@ -96,25 +96,28 @@ export default function Home() {
           <Reveal delay={0.05}>
             <p>
               I&apos;m an ICAS Chartered Accountant and First-Class Economics
-              graduate who started out in Big 4 assurance at EY before moving
-              into high-growth FP&amp;A. Today I lead Group FP&amp;A - owning
-              budgets, building the long-range model, and business-partnering
-              with department heads to turn numbers into commercial decisions.
+              Graduate who started out in Big 4 Assurance at EY before moving
+              into FP&amp;A. Today I lead Group FP&amp;A - owning budgets,
+              building the long-range model and business-partnering with
+              department heads to turn numbers into actionable commercial
+              decisions.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <p>
               What sets me apart is how I work: I bring traditional financial
-              rigour together with Python, data analysis, and AI-driven
+              rigour together with coding, data analysis and AI-driven
               automation - implementing Datarails, scripting away manual
-              reporting, and using tools like Claude to get to answers faster.
+              reporting and using tools like Claude to get to answers faster.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <p>
-              Outside of work I&apos;m usually running or travelling - I&apos;ve
-              backpacked across Central and South America, Australia, and New
-              Zealand - and I like following where AI and Bitcoin are heading.
+              Outside of work I&apos;m usually training for my next running
+              challenge or travelling - I&apos;ve backpacked across Central
+              &amp; South America, Australia and New Zealand. I like following
+              where AI and Bitcoin are heading and supporting Chelsea through
+              thick and thin.
             </p>
           </Reveal>
         </div>

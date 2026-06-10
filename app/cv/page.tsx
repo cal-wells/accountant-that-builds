@@ -56,7 +56,7 @@ export default function CvPage() {
       <section className="mt-16 border-t border-border pt-12">
         <Reveal>
           <h2 className="text-2xl font-bold text-ink">
-            What the AI &amp; coding skills actually buy you
+            {"AI & coding assisted deliverables:"}
           </h2>
         </Reveal>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
