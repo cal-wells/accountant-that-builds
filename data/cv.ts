@@ -37,12 +37,12 @@ export const roles: Role[] = [
     ],
   },
   {
-    title: "Assistant Manager - Banking & Capital Markets",
+    title: "Associate to Assistant Manager - Banking & Capital Markets",
     company: "Ernst & Young (EY)",
     period: "Sept 2020 – Jan 2025",
     logo: "/logos/ey.jpg",
     points: [
-      "Rapidly promoted through the firm, leading large-scale assurance engagements for FTSE 100 and challenger banks.",
+      "Promoted from Associate to Assistant Manager over four years, leading large-scale assurance engagements for FTSE 100 and challenger banks.",
       "Managed and coached teams of up to 10 associates, overseeing allocation, performance reviews, and delivery under tight deadlines.",
       "Led validation of a £3bn derivative portfolio using Alteryx and Spotfire across 20,000+ trade samples, surfacing valuation risks traditional sampling missed.",
       "Evaluated complex IFRS 9/13 valuation models, challenging client methodologies on estimation uncertainty and going concern.",
@@ -99,6 +99,6 @@ export const skillGroups: SkillGroup[] = [
   {
     heading: "The toolkit",
     blurb:
-      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire, and advanced Excel modelling - accelerated with AI assistants like Claude Code and Cursor. Backed by formal training: Google Generative AI Leader and Python for Finance.",
+      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire, and advanced Excel modelling - accelerated with AI assistants like Claude Code and Cursor. Backed by formal training: Claude Code in Action, EY Analytics - Data Science, and Datarails Power User.",
   },
 ];
