@@ -80,7 +80,7 @@ export function Nav() {
           {/* Mobile trigger */}
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-ink sm:hidden"
+            className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-md text-ink sm:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"

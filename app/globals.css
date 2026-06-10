@@ -16,7 +16,7 @@
   --color-primary: #2563eb; /* cobalt blue accent (Chelsea-inspired) */
   --color-primary-dark: #1d4fd7; /* hover/active for primary */
   --color-secondary: #4f46e5; /* deep indigo for gradients/highlights */
-  --color-danger: #dc2626; /* form validation errors */
+  --color-danger: #b91c1c; /* form validation errors (AA contrast on off-white) */
 
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
