@@ -8,6 +8,8 @@ export type Role = {
   company: string;
   period: string;
   points: string[];
+  /** Optional company logo in /public/logos/. Rendered next to the role when set. */
+  logo?: string;
 };
 
 export type Qualification = {
@@ -25,6 +27,7 @@ export const roles: Role[] = [
     title: "Group FP&A Manager",
     company: "Mattioli Woods (formerly Kingswood Group)",
     period: "Jan 2025 – Present",
+    logo: "/logos/mattioli_woods.jpg",
     points: [
       "Spearheaded the end-to-end implementation of Datarails within six months - integrating Xero API data flows and restructuring the Chart of Accounts to ensure data integrity.",
       "Cut the month-end reporting cycle by ~3 days, eliminating manual spreadsheet dependencies and freeing ~20% of team capacity for value-add analysis.",
@@ -37,6 +40,7 @@ export const roles: Role[] = [
     title: "Assistant Manager - Banking & Capital Markets",
     company: "Ernst & Young (EY)",
     period: "Sept 2020 – Jan 2025",
+    logo: "/logos/ey.jpg",
     points: [
       "Rapidly promoted through the firm, leading large-scale assurance engagements for FTSE 100 and challenger banks.",
       "Managed and coached teams of up to 10 associates, overseeing allocation, performance reviews, and delivery under tight deadlines.",
@@ -48,6 +52,7 @@ export const roles: Role[] = [
     title: "Portfolio Management Intern",
     company: "Guinness Ventures",
     period: "Oct 2019 – Jan 2020",
+    logo: "/logos/guinness_ventures.jpg",
     points: [
       "Prepared monthly performance packs for 25 portfolio companies, presenting KPI analysis directly to the Investment Committee.",
       "Ran sensitivity analysis and commercial due diligence on early-stage investment opportunities.",
@@ -57,6 +62,7 @@ export const roles: Role[] = [
     title: "Fund Research Assistant",
     company: "RBC Brewin Dolphin",
     period: "Jun 2017 – Aug 2018",
+    logo: "/logos/rbc_brewin_dolphin.jpg",
     points: [
       "Worked with the Head of Research to produce the weekly podcast and synthesise insights from leading fund managers for client distribution.",
     ],

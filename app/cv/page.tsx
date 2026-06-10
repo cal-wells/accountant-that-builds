@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { roles, qualifications, skillGroups } from "@/data/cv";
 import { siteConfig } from "@/lib/site";
 import { Reveal } from "@/components/motion/reveal";
@@ -34,18 +35,37 @@ export default function CvPage() {
                   aria-hidden
                   className="absolute -left-[41px] top-1.5 h-4 w-4 rounded-full border-2 border-background bg-primary"
                 />
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-                  <h3 className="text-xl font-bold text-ink">{role.title}</h3>
-                  <span className="text-sm font-medium text-muted">
-                    {role.period}
-                  </span>
+                <div className="flex items-start gap-4">
+                  {role.logo ? (
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border bg-surface p-1.5 shadow-soft">
+                      <Image
+                        src={role.logo}
+                        alt={`${role.company} logo`}
+                        width={40}
+                        height={40}
+                        className="h-full w-full object-contain"
+                      />
+                    </span>
+                  ) : null}
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                      <h3 className="text-xl font-bold text-ink">
+                        {role.title}
+                      </h3>
+                      <span className="text-sm font-medium text-muted">
+                        {role.period}
+                      </span>
+                    </div>
+                    <p className="mt-0.5 font-medium text-primary">
+                      {role.company}
+                    </p>
+                    <ul className="mt-3 list-disc space-y-1.5 pl-5 text-muted">
+                      {role.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <p className="mt-0.5 font-medium text-primary">{role.company}</p>
-                <ul className="mt-3 list-disc space-y-1.5 pl-5 text-muted">
-                  {role.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
               </li>
             </Reveal>
           ))}
