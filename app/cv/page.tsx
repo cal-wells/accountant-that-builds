@@ -6,7 +6,7 @@ import { Reveal } from "@/components/motion/reveal";
 
 export const metadata: Metadata = {
   title: "CV",
-  description: `Experience, qualifications, and skills of ${siteConfig.name}.`,
+  description: `Experience, qualifications and skills of ${siteConfig.name}.`,
 };
 
 export default function CvPage() {
@@ -59,6 +59,11 @@ export default function CvPage() {
                     <p className="mt-0.5 font-medium text-primary">
                       {role.company}
                     </p>
+                    {role.summary ? (
+                      <p className="mt-2 text-sm italic leading-relaxed text-muted">
+                        {role.summary}
+                      </p>
+                    ) : null}
                     <ul className="mt-3 list-disc space-y-1.5 pl-5 text-muted">
                       {role.points.map((point) => (
                         <li key={point}>{point}</li>

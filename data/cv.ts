@@ -8,6 +8,8 @@ export type Role = {
   company: string;
   period: string;
   points: string[];
+  /** Optional one-line context/scale descriptor, shown under the company. */
+  summary?: string;
   /** Optional company logo in /public/logos/. Rendered next to the role when set. */
   logo?: string;
 };
@@ -28,6 +30,8 @@ export const roles: Role[] = [
     company: "Mattioli Woods (formerly Kingswood Group)",
     period: "Jan 2025 – Present",
     logo: "/logos/mattioli_woods.jpg",
+    summary:
+      "Lead FP&A for Group Delivery across a £12.6bn AUM, £47.4m revenue wealth manager spanning Investment Management, Administration and Banking. Manage two analysts.",
     points: [
       "Spearheaded the end-to-end implementation of Datarails within six months - integrating Xero API data flows and restructuring the Chart of Accounts to ensure data integrity.",
       "Cut the month-end reporting cycle by ~3 days, eliminating manual spreadsheet dependencies and freeing ~20% of team capacity for value-add analysis.",
@@ -43,7 +47,7 @@ export const roles: Role[] = [
     logo: "/logos/ey.jpg",
     points: [
       "Promoted from Associate to Assistant Manager over four years, leading large-scale assurance engagements for FTSE 100 and challenger banks.",
-      "Managed and coached teams of up to 10 associates, overseeing allocation, performance reviews, and delivery under tight deadlines.",
+      "Managed and coached teams of up to 10 associates, overseeing allocation, performance reviews and delivery under tight deadlines.",
       "Led validation of a £3bn derivative portfolio using Alteryx and Spotfire across 20,000+ trade samples, surfacing valuation risks traditional sampling missed.",
       "Evaluated complex IFRS 9/13 valuation models, challenging client methodologies on estimation uncertainty and going concern.",
     ],
@@ -94,11 +98,11 @@ export const skillGroups: SkillGroup[] = [
   {
     heading: "Real cost savings",
     blurb:
-      "Wrote Python to automate forensic and losses analysis that used to be manual - measurable hours saved, fewer errors, and faster answers for the business.",
+      "Wrote Python to automate forensic and losses analysis that used to be manual - measurable hours saved, fewer errors and faster answers for the business.",
   },
   {
     heading: "The toolkit",
     blurb:
-      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire, and advanced Excel modelling - accelerated with AI assistants like Claude Code and Cursor. Backed by formal training: Claude Code in Action, EY Analytics - Data Science, and Datarails Power User.",
+      "Python (Pandas), Datarails, PowerBI, Alteryx, Spotfire and advanced Excel modelling - accelerated with AI assistants like Claude Code and Cursor. Backed by formal training: Claude Code in Action, EY Analytics - Data Science and Datarails Power User.",
   },
 ];

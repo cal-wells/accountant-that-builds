@@ -22,7 +22,7 @@ export const siteConfig = {
   tagline: "The accountant that builds",
   location: "London, UK",
   description:
-    "Group FP&A Manager and ICAS Chartered Accountant using AI and code to modernise finance - faster reporting, sharper forecasting, and real efficiency.",
+    "Group FP&A Manager and ICAS Chartered Accountant using AI and code to modernise finance - faster reporting, sharper forecasting and real efficiency.",
   email: "callumwells23@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/wellscallum/",
   githubUrl: "https://github.com/cal-wells",

@@ -97,10 +97,10 @@ export default function Home() {
             <p>
               I&apos;m an ICAS Chartered Accountant and First-Class Economics
               Graduate who started out in Big 4 Assurance at EY before moving
-              into FP&amp;A. Today I lead Group FP&amp;A - owning budgets,
-              building the long-range model and business-partnering with
-              department heads to turn numbers into actionable commercial
-              decisions.
+              into FP&amp;A. Today I lead Group FP&amp;A at a £12.6bn AUM
+              wealth manager - owning budgets, building the long-range model
+              and business-partnering with department heads across three
+              divisions to turn numbers into actionable commercial decisions.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -109,6 +109,9 @@ export default function Home() {
               rigour together with coding, data analysis and AI-driven
               automation - implementing Datarails, scripting away manual
               reporting and using tools like Claude to get to answers faster.
+              My view is simple: AI and automation should free finance teams
+              from the grunt work so they can spend their time on strategy and
+              genuinely useful commercial advice.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
